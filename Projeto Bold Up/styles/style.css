@@ -1,0 +1,604 @@
+:root {
+  /* Cores */
+  --cor-principal: #888;
+  --cor-secundaria: #FFFFFF;
+  --cor-texto-principal: #888888;
+  --cor-texto-secundario: #666;
+  --cor-borda: #707070;
+  --cor-shadow: #00000029;
+  --cor-linha: #999;
+  --cor-texto-branco: #FFFFFF;
+
+  /* Fontes */
+  --fonte-principal: "Helvetica Neue", sans-serif;
+
+  /* Tamanhos de Fonte */
+  --tamanho-titulo: 2.5rem;
+  --tamanho-subtitulo: 1.25rem;
+  --tamanho-texto-grande: 1rem;
+  --tamanho-texto-medio: 0.87rem;
+  --tamanho-texto-pequeno: 0.75rem;
+  --tamanho-texto-menor: 0.9rem;
+  --tamanho-linha-titulo: 1.12rem;
+}
+
+/* Estilos Globais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--fonte-principal);
+  width: 100vw;
+}
+
+/* Hero Section */
+.hero {
+  height: 397.89px;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-branco);
+  padding: 66px 46px 57.89px 16px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 68%);
+  text-align: start;
+  position: relative;
+  z-index: 0;
+}
+
+.titulo {
+  font-size: var(--tamanho-titulo);
+  font-weight: 700;
+}
+
+.subtitulo {
+  font-size: var(--tamanho-subtitulo);
+  font-weight: 400;
+  text-transform: lowercase;
+}
+
+.descricao {
+  font-size: var(--tamanho-texto-medio);
+  margin-top: 9px;
+  margin-bottom: 15px;
+}
+
+.botoes-hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 21px;
+  justify-content: center;
+  padding: 0 28px 0 14px;
+  margin-top: -168px; /* sobe os botões por cima da borda diagonal */
+  position: relative;
+  z-index: 1; /* garante que apareçam acima do fundo */
+}
+
+.botoes-hero button {
+  width: 7.24rem;
+  font-size: var(--tamanho-texto-medio);
+  color: var(--cor-texto-principal);
+  padding: 12px 16px;
+  cursor: pointer;
+  font-weight: 400;
+  flex: 1 1 47%;
+}
+
+.btn-item {
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  box-shadow: 0px 1px 6px var(--cor-shadow);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  opacity: 1;
+}
+
+/* Formulário Principal */
+.formulario {
+  padding: 20px;
+  background-color: var(--cor-secundaria);
+  margin-top: 80px;
+}
+
+.title-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-form img {
+  margin-top: 3px;
+  width: 24px;
+  height: 18px;
+}
+
+.formulario h2 {
+  font-size: var(--tamanho-subtitulo);
+  color: var(--cor-texto-principal);
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.formulario p {
+  font-size: var(--tamanho-texto-pequeno);
+  font-weight: 400;
+  color: var(--cor-texto-principal);
+  margin-bottom: 17px;
+}
+
+.formulario label {
+  font-size: var(--tamanho-texto-pequeno);
+  font-weight: 400;
+  color: var(--cor-texto-principal);
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"] {
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cor-borda);
+  opacity: 1;
+  width: 100%;
+  padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
+
+.sexo {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.sexo label {
+  font-size: var(--tamanho-texto-menor);
+}
+
+.formulario button {
+  margin-top: 20px;
+  margin-bottom: 91px;
+  font-size: var(--tamanho-texto-grande);
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  color: var(--cor-texto-principal);
+  padding: 10px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  width: 100%;
+  font-weight: 400;
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* Linha de Título */
+.linha-titulo {
+  display: flex;
+  align-items: center;
+  text-align: start;
+  color: var(--cor-texto-principal);
+  font-weight: bold;
+  font-size: var(--tamanho-linha-titulo);
+  margin-left: -20px;
+  margin-bottom: 23px;
+  width: 100vw;
+  position: relative;
+}
+
+.linha-titulo::before,
+.linha-titulo::after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px solid var(--cor-linha);
+}
+
+.linha-titulo span {
+  color: var(--cor-linha);
+  font-weight: bold;
+  font-size: var(--tamanho-texto-grande);
+  padding: 0 20px;
+  background-color: #fff;
+  /* ou a cor de fundo da sua página */
+  z-index: 1;
+}
+
+/* Seção de Produtos */
+.produtos {
+  padding: 20px;
+  background-color: var(--cor-secundaria);
+  margin-top: 20px;
+}
+
+.nome {
+  font-size: var(--tamanho-texto-medio);
+  margin-bottom: 13px;
+  text-align: start;
+  font-weight: 400;
+}
+
+.descricao-produto {
+  display: none;
+}
+
+.produto {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.imagem-produto {
+  width: 40%;
+  background-color: var(--cor-secundaria);
+  border: 1px solid var(--cor-borda);
+  opacity: 1;
+  aspect-ratio: 1 / 1;
+}
+
+.info-produto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--cor-texto-principal);
+}
+
+.preco-de {
+  text-decoration: line-through;
+  color: var(--cor-principal);
+  font-size: var(--tamanho-texto-pequeno);
+  margin-bottom: 6px;
+}
+
+.preco-por {
+  font-size: var(--tamanho-texto-grande);
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+
+.preco-parcela {
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-secundario);
+  margin-bottom: 20px;
+}
+
+.info-produto button {
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  color: var(--cor-texto-principal);
+  font-size: var(--tamanho-texto-grande);
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  opacity: 1;
+  padding: 5px;
+}
+
+.btn-carregar {
+  font-size: var(--tamanho-texto-grande);
+  color: var(--cor-texto-principal);
+  width: 260px;
+  margin-top: 49px;
+  margin-left: 15%;
+  margin-bottom: 129px;
+  padding: 10px;
+  font-weight: 400;
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Compartilhe com um Amigo */
+.compartilhe-amigo {
+  font-size: var(--tamanho-texto-medio);
+  color: var(--cor-texto-principal);
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.formulario-amigo {
+  margin-left: 9px;
+}
+
+.formulario-amigo label {
+  font-size: var(--tamanho-texto-pequeno);
+  font-weight: 400;
+  color: var(--cor-texto-principal);
+}
+
+.formulario-amigo input[type="text"],
+.formulario-amigo input[type="email"] {
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cor-borda);
+  opacity: 1;
+  width: 397px;
+  padding: 10px;
+  margin-top: 7px;
+  margin-bottom: 10px;
+}
+
+.btn-enviar-agora {
+  font-size: var(--tamanho-texto-grande);
+  color: var(--cor-texto-principal);
+  width: 260px;
+  margin-top: 53px;
+  margin-left: 15%;
+  margin-bottom: 85px;
+  padding: 10px;
+  font-weight: 400;
+  background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+  border: 1px solid var(--cor-borda);
+  border-radius: 4px;
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Footer */
+.clip-footer {
+  height: 158px;
+  background-color: var(--cor-borda);
+  color: var(--cor-texto-branco);
+  padding: 71px 80px 36px 80px;
+  clip-path: polygon(0 20%, 100% 0, 100% 100%, 0 100%);
+  text-align: start;
+  position: relative;
+  z-index: 0;
+}
+
+.clip-footer p {
+  font-size: var(--tamanho-texto-pequeno);
+  color: var(--cor-texto-branco);
+  text-align: center;
+  line-height: 1.7;
+}
+
+/* Media Queries */
+@media (min-width: 600px) and (max-width: 768px) {
+  .hero {
+    text-align: center;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+    margin-bottom: 25px;
+  }
+
+  .subtitulo {
+    margin-bottom: 5px;
+  }
+
+  .titulo {
+    margin-bottom: 9px;
+  }
+
+  .descricao {
+    padding: 0 160px;
+  }
+
+  .title-user {
+    padding: 0 21px 0 16px;
+  }
+
+  .hello {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: var(--tamanho-subtitulo);
+    color: var(--cor-texto-principal);
+    margin-bottom: 5px;
+  }
+
+  .hello-paragraph {
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: var(--tamanho-texto-pequeno);
+    color: var(--cor-texto-secundario);
+  }
+
+  .imagem-produto {
+    margin-bottom: 14px;
+    width: 200px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-borda);
+    opacity: 1;
+  }
+
+  .produtos {
+    display: grid;
+    padding: 17px 150px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .produto {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+
+  .produto button {
+    width: 200px;
+  }
+
+  .btn-carregar {
+    width: 350px;
+    margin: 49px auto 129px auto;
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 2400px) {
+  .hero {
+    text-align: center;
+  }
+
+  .descricao {
+    margin-top: 24px;
+  }
+
+  .botoes-hero {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding: 0 160px;
+    gap: 40px;
+  }
+
+  .btn-item {
+    padding: 0;
+    width: 300px;
+  }
+
+  .formulario {
+    display: flex;
+    margin-top: 168px;
+  }
+
+  .title {
+    gap: 60px;
+    margin-left: 150px;
+  }
+
+  .title img {
+    display: none;
+  }
+
+  .formulario p {
+    padding-right: 180px;
+  }
+
+  .formulario form {
+    margin-right: 200px;
+  }
+
+  .formulario input[type="text"],
+  .formulario input[type="email"] {
+    min-width: 340px;
+  }
+
+  .produtos {
+    padding: 50px 145px 0;
+    background-color: var(--cor-secundaria);
+    margin-left: 25px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .produto {
+    display: block;
+    flex-direction: column;
+    margin-bottom: 45px;
+  }
+
+  .nome {
+    margin-bottom: 10px;
+  }
+
+  .imagem-produto {
+    margin-bottom: 14px;
+    width: 200px;
+    height: 150px;
+    aspect-ratio: 1 / 1;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-borda);
+    opacity: 1;
+  }
+
+  .descricao-produto {
+    display: block;
+    font-size: var(--tamanho-texto-pequeno);
+    color: var(--cor-texto-principal);
+    font-weight: 400;
+    padding-right: 80px;
+    margin-bottom: 10px;
+  }
+
+  .preco-de,.preco-por {
+    margin-bottom: 0;
+  }
+
+  .preco-parcela {
+    margin-bottom: 10px;
+  }
+
+  .produto button {
+    width: 200px;
+  }
+
+  .info-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--cor-texto-principal);
+  }
+
+  .btn-carregar {
+    width: 260px;
+    /* Ou ajuste para a largura desejada em desktop */
+    margin: 49px auto 129px auto;
+    /* Centralize o botão "Carregar mais" */
+    display: block;
+    /* Garante que o botão ocupe a largura definida e fique centralizado */
+  }
+
+  .linha-titulo {
+    display: flex;
+    align-items: center;
+    text-align: start;
+    color: var(--cor-texto-principal);
+    font-weight: bold;
+    font-size: var(--tamanho-linha-titulo);
+    margin-left: 170px;
+    margin-bottom: 23px;
+    width: 73vw;
+    position: relative;
+  }
+
+  .form-label-input {
+    display: flex;
+    justify-content: center;
+    padding: 0 200px;
+    gap: 20px;
+    /* Espaçamento entre os pares label-input */
+    margin-top: 20px;
+    /* Espaçamento entre o título e o formulário */
+    margin-bottom: 20px;
+    /* Espaçamento entre o formulário e o botão */
+  }
+
+  .form-label-input label {
+    margin-bottom: 10px;
+  }
+
+  .formulario-amigo label {
+    font-size: var(--tamanho-texto-pequeno);
+    font-weight: 400;
+    color: var(--cor-texto-principal);
+  }
+
+  .formulario-amigo input[type="text"],
+  .formulario-amigo input[type="email"] {
+    background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--cor-borda);
+    opacity: 1;
+    width: 30vw;
+    /* Faz o input ocupar a largura total da sua célula no grid */
+    padding: 10px;
+    margin-top: 7px;
+    /* Remove a margem superior padrão */
+    margin-bottom: 10px;
+    /* Mantém ou ajusta a margem inferior */
+  }
+
+  .btn-enviar-agora {
+    font-size: var(--tamanho-texto-grande);
+    color: var(--cor-texto-principal);
+    width: 260px;
+    margin-top: 53px;
+    margin-left: 525px;
+    /* Centraliza horizontalmente */
+    margin-bottom: 85px;
+    padding: 10px;
+    font-weight: 400;
+    background: var(--cor-secundaria) 0% 0% no-repeat padding-box;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    opacity: 1;
+    cursor: pointer;
+    grid-column: 1 / 3;
+  }
+}
