@@ -1,6 +1,4 @@
-# projectboldespecialforyou
-
-# Projeto E-commerce 
+# Projeto Bold Comunicação E-commerce 
 
 "Este projeto é um site de e-commerce responsivo desenvolvido utilizando HTML5, CSS3 e JavaScript para a seleção da [BoldComunicação]." 
 
@@ -17,11 +15,9 @@
 * Layout responsivo
 * Formulários para novidades e compartilhamento entre amigos
 
-## Como Executar Localmente
-
-1.  Clone o repositório: `git clone https://docs.github.com/articles/referencing-and-citing-content`
-2.  Navegue até o diretório: `cd [nome-do-seu-repositorio]`
-3.  Abra `index.html` no navegador.
+## Como Executar 
+Aqui está um deploy para executar o projeto
+https://projectbold.vercel.app/
 
 ## Sobre Mim
 
